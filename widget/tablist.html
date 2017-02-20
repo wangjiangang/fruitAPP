@@ -1,0 +1,6 @@
+<div class="tabs tabs-icon-bottom tabs-light  tabs-color-black">
+    <a ng-repeat="item in list" href="{{item.link}}" ng-click="getStatus($index)" ng-class="{'active':item.active}" class="tab-item">
+	    <i class="icon {{item.icon}}"></i>
+	    {{item.name}}
+    </a>
+</div>

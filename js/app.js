@@ -1,0 +1,25 @@
+//这是项目入口js文件
+var app = angular.module('fruitApp', ['ionic','ngRoute']);
+app.config(function($routeProvider){
+	$routeProvider.when('/home',{
+		templateUrl:'/view/home.html',
+		controller:'homeCtrl'
+	}).when('/cart',{
+		templateUrl:'/view/cart.html',
+		controller:'cartCtrl'
+	}).when('/active',{
+		templateUrl:'/view/active.html',
+		controller:'activeCtrl'
+	}).when('/money',{
+		templateUrl:'/view/money.html',
+		controller:'moneyCtrl'
+	}).when('/info',{
+		templateUrl:'/view/info.html',
+		controller:'infoCtrl'
+	}).when('/address',{
+		templateUrl:'/view/address.html',
+		controller:'addressCtrl'
+	}).otherwise({
+		redirectTo:'/home'
+	});
+});
